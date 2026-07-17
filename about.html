@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ประวัติส่วนตัว | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Prompt',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(-45deg,#001F54,#034078,#0466C8,#0096C7,#48CAE4,#90E0EF);
+    background-size:600% 600%;
+    animation:bgMove 15s ease infinite;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* Glow */
+
+.glow{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(120px);
+
+opacity:.6;
+
+animation:float 8s ease-in-out infinite;
+
+}
+
+.glow1{
+
+width:350px;
+height:350px;
+
+background:#00E5FF;
+
+top:-100px;
+left:-100px;
+
+}
+
+.glow2{
+
+width:300px;
+height:300px;
+
+background:#2979FF;
+
+bottom:-80px;
+right:-80px;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-40px);
+
+}
+
+}
+
+/* Navbar */
+
+.navbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 60px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+}
+
+.logo{
+
+color:white;
+
+font-size:28px;
+
+font-weight:700;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:18px;
+
+padding:10px 18px;
+
+border-radius:30px;
+
+transition:.3s;
+
+}
+
+nav a:hover,
+
+.active{
+
+background:white;
+
+color:#1565C0;
+
+}
+
+/* Card */
+
+.card{
+
+width:900px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+padding:40px;
+
+border-radius:25px;
+
+display:flex;
+
+gap:40px;
+
+color:white;
+
+box-shadow:0 15px 45px rgba(0,0,0,.25);
+
+}
+
+/* รูป */
+
+.profile{
+
+width:250px;
+
+text-align:center;
+
+}
+
+.profile img{
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+border:5px solid white;
+
+object-fit:cover;
+
+box-shadow:0 0 30px #7fd8ff;
+
+}
+
+/* ข้อมูล */
+
+.info{
+
+flex:1;
+
+}
+
+.info h1{
+
+margin-bottom:20px;
+
+font-size:34px;
+
+}
+
+.info p{
+
+font-size:18px;
+
+margin:12px 0;
+
+line-height:1.8;
+
+}
+
+.info h2{
+
+margin-top:25px;
+
+margin-bottom:10px;
+
+color:#E3F2FD;
+
+}
+
+@media(max-width:768px){
+
+.card{
+
+width:90%;
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<header class="navbar">
+
+<div class="logo">
+PORTFOLIO
+</div>
+
+<nav>
+
+<a href="index.html">หน้าหลัก</a>
+<a href="about.html" class="active">ประวัติส่วนตัว</a>
+<a href="education.html">ประวัติการศึกษา</a>
+<a href="portfolio.html">ผลงาน</a>
+<a href="contact.html">ช่องทางการติดต่อ</a>
+
+</nav>
+
+</header>
+
+<div class="card">
+
+<div class="profile">
+
+<img src="images/profile.jpg" alt="Profile">
+
+<h2 style="margin-top:20px;">นางสาวฑิฆัมพร ประไกรวัน</h2>
+
+</div>
+
+<div class="info">
+
+<h1>ประวัติส่วนตัว</h1>
+
+<p><strong>ชื่อ-นามสกุล :</strong> นางสาวฑิฆัมพร ประไกรวัน</p>
+
+<p><strong>ชื่อเล่น :</strong> บีม</p>
+
+<p><strong>วันเกิด :</strong> 7 มิถุนายน 2551</p>
+
+<p><strong>กำลังศึกษา :</strong> ชั้นมัธยมศึกษาปีที่ 6</p>
+
+<p><strong>โรงเรียน :</strong> โรงเรียนพานทอง</p>
+
+<p><strong>แผนการเรียน :</strong> วิทยาศาสตร์</p>
+
+<h2>🎵 งานอดิเรก</h2>
+
+<p>• ดูหนัง<br>
+• ฟังเพลง<br>
+• เต้นรำ</p>
+
+<h2>🎯 ความใฝ่ฝัน</h2>
+
+<p>
+ข้าพเจ้ามีความใฝ่ฝันที่จะศึกษาต่อและประกอบอาชีพ
+<strong>แพทย์</strong> เพื่อช่วยเหลือผู้ป่วยและดูแลสุขภาพของผู้คน
+นอกจากนี้ยังมีความสนใจในอาชีพ
+<strong>ครู</strong> เพราะต้องการถ่ายทอดความรู้และสร้างแรงบันดาลใจให้กับเยาวชน
+</p>
+
+<h2>💙 คติประจำใจ</h2>
+
+<p>
+"ความสำเร็จเกิดจากความพยายามและการไม่ยอมแพ้"
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
