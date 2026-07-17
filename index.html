@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portfolio | นางสาวฑิฆัมพร ประไกรวัน</title>
+<title>Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,231 +21,109 @@
 }
 
 body{
+
     min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    position:relative;
 
-    background:linear-gradient(
-        -45deg,
-        #001F54,
-        #034078,
-        #1282A2,
-        #00B4D8,
-        #48CAE4,
-        #90E0EF
-    );
+    background:linear-gradient(-45deg,#001F54,#034078,#1282A2,#00B4D8,#48CAE4);
 
-    background-size:600% 600%;
-    animation:bgMove 15s ease infinite;
+    background-size:400% 400%;
+
+    animation:bgMove 12s ease infinite;
+
 }
 
 @keyframes bgMove{
+
     0%{background-position:0% 50%;}
+
     50%{background-position:100% 50%;}
+
     100%{background-position:0% 50%;}
+
 }
 
-/* Glow */
-.glow{
-    position:absolute;
-    border-radius:50%;
-    filter:blur(120px);
-    opacity:.7;
-    animation:float 8s ease-in-out infinite;
-}
+.navbar{
 
-.glow1{
-    width:350px;
-    height:350px;
-    background:#00E5FF;
-    top:-100px;
-    left:-100px;
-}
+    position:fixed;
 
-.glow2{
-    width:300px;
-    height:300px;
-    background:#2979FF;
-    bottom:-80px;
-    right:-80px;
-    animation-delay:2s;
-}
+    top:0;
 
-.glow3{
-    width:250px;
-    height:250px;
-    background:#80D8FF;
-    top:50%;
-    left:65%;
-    animation-delay:4s;
-}
+    left:0;
 
-@keyframes float{
-    50%{
-        transform:translateY(-40px) translateX(20px);
-    }
-}
+    width:100%;
 
-/* กล่องหลัก */
-.card{
-    width:450px;
-    padding:40px;
-    text-align:center;
+    height:75px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 60px;
 
     background:rgba(255,255,255,.15);
-    border:1px solid rgba(255,255,255,.25);
-    backdrop-filter:blur(18px);
 
-    border-radius:25px;
+    backdrop-filter:blur(15px);
 
-    box-shadow:0 15px 45px rgba(0,0,0,.25);
+    border-bottom:1px solid rgba(255,255,255,.2);
+
+}
+
+.logo{
 
     color:white;
 
-    animation:show 1.5s;
+    font-size:28px;
+
+    font-weight:700;
+
 }
 
-@keyframes show{
-    from{
-        opacity:0;
-        transform:translateY(50px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
+nav{
 
-/* รูปโปรไฟล์ */
-.profile{
-    width:160px;
-    height:160px;
-    margin:auto;
-    border-radius:50%;
-    overflow:hidden;
-    border:5px solid white;
-    box-shadow:0 0 30px #7fd8ff;
-}
-
-.profile img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* ข้อความ */
-h3{
-    margin-top:25px;
-    letter-spacing:4px;
-    font-weight:500;
-}
-
-h1{
-    margin:15px 0;
-    font-size:32px;
-}
-
-h2{
-    font-size:20px;
-    font-weight:400;
-    margin-bottom:10px;
-}
-
-.school{
-    font-weight:600;
-    margin-bottom:10px;
-}
-
-.description{
-    line-height:1.8;
-    margin-top:10px;
-}
-
-/* ปุ่ม */
-.button-group{
-    margin-top:30px;
     display:flex;
-    justify-content:center;
+
     gap:15px;
+
 }
 
-.button-group a{
-    padding:12px 30px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
+nav a{
 
-.btn{
-    background:white;
-    color:#1565C0;
-}
-
-.btn2{
-    background:transparent;
     color:white;
-    border:2px solid white;
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    transition:.3s;
+
 }
 
-.button-group a:hover{
-    transform:translateY(-5px);
+nav a:hover{
+
+    background:white;
+
+    color:#1565C0;
+
 }
 
-/* มือถือ */
-@media(max-width:768px){
+.active{
 
-    .card{
-        width:90%;
-        padding:30px;
-    }
+    background:white;
 
-    .profile{
-        width:130px;
-        height:130px;
-    }
+    color:#1565C0;
 
-    h1{
-        font-size:26px;
-    }
 }
+
 </style>
+
 </head>
+
 <body>
 
-<header class="navbar">
-...
-</header>
-
-<div class="glow glow1"></div>
-<div class="glow glow2"></div>
-<div class="glow glow3"></div>
-
-<div class="card">
-...
-</div>
-
-</body>
-        <img src="https://via.placeholder.com/300" alt="Profile">
-    </div>
-<h3>PORTFOLIO</h3>
-<h1>นางสาวฑิฆัมพร ประไกรวัน</h1>
-<h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
-<p class="school">โรงเรียนพานทอง</p>
-<p class="description">
-        ยินดีต้อนรับสู่เว็บไซต์ Portfolio
-        เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมข้อมูลส่วนตัว
-        ประวัติการศึกษา ผลงาน และช่องทางการติดต่อ
-    </p>
- <div class="button-group">
-        <a href="about.html" class="btn">ประวัติส่วนตัว</a>
-        <a href="contact.html" class="btn2">ติดต่อ</a>
-    </div>
-</div>
-</body>
 <header class="navbar">
 
     <div class="logo">
@@ -253,13 +131,20 @@ h2{
     </div>
 
     <nav>
+
         <a href="index.html" class="active">หน้าหลัก</a>
+
         <a href="about.html">ประวัติส่วนตัว</a>
+
         <a href="education.html">ประวัติการศึกษา</a>
+
         <a href="portfolio.html">ผลงาน</a>
+
         <a href="contact.html">ช่องทางการติดต่อ</a>
+
     </nav>
 
 </header>
 
-</header>
+</body>
+</html>
