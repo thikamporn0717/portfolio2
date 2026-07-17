@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portfolio</title>
+<title>Portfolio | นางสาวฑิฆัมพร ประไกรวัน</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,101 +20,416 @@
     font-family:'Prompt',sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
 
     min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
 
-    background:linear-gradient(-45deg,#001F54,#034078,#1282A2,#00B4D8,#48CAE4);
+    background:linear-gradient(
+        -45deg,
+        #001F54,
+        #034078,
+        #0466C8,
+        #0096C7,
+        #48CAE4,
+        #90E0EF
+    );
 
-    background-size:400% 400%;
+    background-size:600% 600%;
 
-    animation:bgMove 12s ease infinite;
+    animation:bgMove 15s ease infinite;
 
 }
 
 @keyframes bgMove{
 
-    0%{background-position:0% 50%;}
-
-    50%{background-position:100% 50%;}
-
-    100%{background-position:0% 50%;}
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 
 }
 
+/* =======================
+   Glow
+======================= */
+
+.glow{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(120px);
+
+opacity:.6;
+
+animation:float 8s ease-in-out infinite;
+
+}
+
+.glow1{
+
+width:350px;
+height:350px;
+
+background:#00E5FF;
+
+top:-100px;
+left:-100px;
+
+}
+
+.glow2{
+
+width:300px;
+height:300px;
+
+background:#2979FF;
+
+bottom:-80px;
+right:-80px;
+
+animation-delay:2s;
+
+}
+
+.glow3{
+
+width:250px;
+height:250px;
+
+background:#80D8FF;
+
+top:50%;
+left:65%;
+
+animation-delay:4s;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-40px) translateX(30px);
+
+}
+
+}
+
+/* =======================
+Navbar
+======================= */
+
 .navbar{
 
-    position:fixed;
+position:fixed;
 
-    top:0;
+top:0;
 
-    left:0;
+left:0;
 
-    width:100%;
+width:100%;
 
-    height:75px;
+padding:18px 8%;
 
-    display:flex;
+display:flex;
 
-    justify-content:space-between;
+justify-content:space-between;
 
-    align-items:center;
+align-items:center;
 
-    padding:0 60px;
+background:rgba(255,255,255,.10);
 
-    background:rgba(255,255,255,.15);
+backdrop-filter:blur(18px);
 
-    backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,.15);
 
-    border-bottom:1px solid rgba(255,255,255,.2);
+z-index:999;
 
 }
 
 .logo{
 
-    color:white;
+color:white;
 
-    font-size:28px;
+font-size:30px;
 
-    font-weight:700;
+font-weight:700;
 
-}
-
-nav{
-
-    display:flex;
-
-    gap:15px;
+letter-spacing:2px;
 
 }
 
-nav a{
+.navbar nav{
 
-    color:white;
+display:flex;
 
-    text-decoration:none;
-
-    padding:10px 18px;
-
-    border-radius:30px;
-
-    transition:.3s;
+gap:15px;
 
 }
 
-nav a:hover{
+.navbar nav a{
 
-    background:white;
+text-decoration:none;
 
-    color:#1565C0;
+color:white;
+
+padding:10px 18px;
+
+border-radius:30px;
+
+transition:.3s;
+
+font-size:16px;
+
+}
+
+.navbar nav a:hover{
+
+background:white;
+
+color:#1565C0;
 
 }
 
 .active{
 
-    background:white;
+background:white;
 
-    color:#1565C0;
+color:#1565C0 !important;
+
+}
+
+/* =======================
+Hero
+======================= */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding-top:100px;
+
+}
+
+.card{
+
+width:480px;
+
+padding:40px;
+
+text-align:center;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(20px);
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.25);
+
+box-shadow:0 15px 45px rgba(0,0,0,.25);
+
+color:white;
+
+animation:show 1.5s;
+
+}
+
+@keyframes show{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+ /* =======================
+Profile
+======================= */
+
+.profile{
+
+width:160px;
+height:160px;
+
+margin:auto;
+
+border-radius:50%;
+
+overflow:hidden;
+
+border:5px solid white;
+
+box-shadow:0 0 35px #7fd8ff;
+
+}
+
+.profile img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+h3{
+
+margin-top:25px;
+
+letter-spacing:4px;
+
+font-weight:500;
+
+}
+
+h1{
+
+margin:15px 0;
+
+font-size:32px;
+
+}
+
+h2{
+
+font-size:20px;
+
+font-weight:400;
+
+margin-bottom:10px;
+
+}
+
+.school{
+
+font-weight:600;
+
+margin-bottom:15px;
+
+}
+
+.description{
+
+line-height:1.8;
+
+margin-top:10px;
+
+}
+
+.button-group{
+
+margin-top:30px;
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+.button-group a{
+
+text-decoration:none;
+
+padding:12px 28px;
+
+border-radius:50px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn{
+
+background:white;
+
+color:#1565C0;
+
+}
+
+.btn2{
+
+background:transparent;
+
+color:white;
+
+border:2px solid white;
+
+}
+
+.button-group a:hover{
+
+transform:translateY(-5px);
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+flex-direction:column;
+
+padding:15px;
+
+}
+
+.navbar nav{
+
+margin-top:10px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.card{
+
+width:90%;
+
+padding:30px;
+
+}
+
+.profile{
+
+width:130px;
+height:130px;
+
+}
+
+h1{
+
+font-size:26px;
+
+}
 
 }
 
@@ -126,25 +441,75 @@ nav a:hover{
 
 <header class="navbar">
 
-    <div class="logo">
-        PORTFOLIO
-    </div>
+<div class="logo">
 
-    <nav>
+PORTFOLIO
 
-        <a href="index.html" class="active">หน้าหลัก</a>
+</div>
 
-        <a href="about.html">ประวัติส่วนตัว</a>
+<nav>
 
-        <a href="education.html">ประวัติการศึกษา</a>
+<a href="index.html" class="active">หน้าหลัก</a>
 
-        <a href="portfolio.html">ผลงาน</a>
+<a href="about.html">ประวัติส่วนตัว</a>
 
-        <a href="contact.html">ช่องทางการติดต่อ</a>
+<a href="education.html">ประวัติการศึกษา</a>
 
-    </nav>
+<a href="portfolio.html">ผลงาน</a>
+
+<a href="contact.html">ช่องทางการติดต่อ</a>
+
+</nav>
 
 </header>
 
+<div class="glow glow1"></div>
+
+<div class="glow glow2"></div>
+
+<div class="glow glow3"></div>
+
+<section class="hero">
+
+<div class="card">
+
+<div class="profile">
+
+<img src="https://via.placeholder.com/300" alt="Profile">
+
+</div>
+
+<h3>PORTFOLIO</h3>
+
+<h1>นางสาวฑิฆัมพร ประไกรวัน</h1>
+
+<h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
+
+<p class="school">
+
+โรงเรียนพานทอง
+
+</p>
+
+<p class="description">
+
+ยินดีต้อนรับสู่เว็บไซต์ Portfolio<br>
+เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมข้อมูลส่วนตัว<br>
+ประวัติการศึกษา ผลงาน และช่องทางการติดต่อ
+
+</p>
+
+<div class="button-group">
+
+<a href="about.html" class="btn">ประวัติส่วนตัว</a>
+
+<a href="contact.html" class="btn2">ติดต่อ</a>
+
+</div>
+
+</div>
+
+</section>
+
 </body>
-</html>
+</html>   
