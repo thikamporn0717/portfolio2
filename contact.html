@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>ช่องทางการติดต่อ | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Prompt',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(-45deg,#001F54,#034078,#0466C8,#0096C7,#48CAE4,#90E0EF);
+    background-size:600% 600%;
+    animation:bgMove 15s ease infinite;
+    color:white;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+    padding:10px 18px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+nav a:hover,
+.active{
+    background:white;
+    color:#1565C0;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding-top:80px;
+}
+
+.card{
+    width:700px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.card h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.contact-item{
+    background:rgba(255,255,255,.12);
+    border-radius:12px;
+    padding:15px 20px;
+    margin-bottom:15px;
+    font-size:18px;
+    transition:.3s;
+}
+
+.contact-item:hover{
+    transform:translateX(8px);
+    background:rgba(255,255,255,.20);
+}
+
+strong{
+    color:#E3F2FD;
+}
+
+@media(max-width:768px){
+
+.card{
+    width:90%;
+}
+
+.navbar{
+    flex-direction:column;
+    padding:15px;
+}
+
+nav{
+    margin-top:10px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+PORTFOLIO
+</div>
+
+<nav>
+
+<a href="index.html">หน้าหลัก</a>
+<a href="about.html">ประวัติส่วนตัว</a>
+<a href="education.html">ประวัติการศึกษา</a>
+<a href="portfolio.html">ผลงาน</a>
+<a href="contact.html" class="active">ช่องทางการติดต่อ</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h1>📞 ช่องทางการติดต่อ</h1>
+
+<div class="contact-item">
+<strong>📧 อีเมล :</strong> youremail@gmail.com
+</div>
+
+<div class="contact-item">
+<strong>📱 เบอร์โทร :</strong> 08X-XXX-XXXX
+</div>
+
+<div class="contact-item">
+<strong>📘 Facebook :</strong> Beam Tigamphon
+</div>
+
+<div class="contact-item">
+<strong>📷 Instagram :</strong> @beam_xxx
+</div>
+
+<div class="contact-item">
+<strong>💚 LINE ID :</strong> beam_xxx
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
